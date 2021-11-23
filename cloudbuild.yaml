@@ -1,10 +1,11 @@
-- name: 'gcr.io/cloud-builders/gcloud'
-- args:
+steps:
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  args:
+  - gcloud
   - functions
   - deploy
-  - - runtime=python38
-  - - trigger-http
-  - - source=./ # Function source files
-  - - entry-point=hello_world # Function entry point
-  - - helloCiCd # Function name
-- id: 'deploying-a-serverless-function'
+  - cicdcf
+  - --source=./
+  - --trigger-http
+  - --runtime=python38
+  - --entry-point=hello_world
