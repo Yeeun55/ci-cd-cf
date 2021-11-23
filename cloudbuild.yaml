@@ -5,8 +5,8 @@ steps:
   - functions
   - deploy
   - cicdcf #function name
-  - --source=./ #source location
+  - --source=. #source location
   - --trigger-http
   - --runtime=python38
-  - --region=asia-northeast1
+  - --region=us-central1
   - --entry-point=hello_world
