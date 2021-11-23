@@ -4,8 +4,9 @@ steps:
   - gcloud
   - functions
   - deploy
-  - cicdcf
-  - --source=./
+  - cicdcf #function name
+  - --source=./ #source location
   - --trigger-http
   - --runtime=python38
+  - --region=asia-northeast1
   - --entry-point=hello_world
